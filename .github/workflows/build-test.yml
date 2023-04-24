@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Initialize energy estimation
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: start-measurement
         continue-on-error: true
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Checkout repo measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Repo checkout"
@@ -32,7 +32,7 @@ jobs:
           node-version: 18.x
 
       - name: Setup node measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Setup node"
@@ -84,7 +84,7 @@ jobs:
         run: npx elm-tooling install
 
       - name: Install dependencies measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Install dependencies"
@@ -96,7 +96,7 @@ jobs:
         run: npx elm make
 
       - name: Elm make measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Elm make"
@@ -106,7 +106,7 @@ jobs:
         run: npx elm-test
 
       - name: Elm test measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Elm test"
@@ -116,7 +116,7 @@ jobs:
         run: npx elm-review
 
       - name: Elm review measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Elm review"
@@ -126,14 +126,14 @@ jobs:
         run: npx elm-format --validate .
 
       - name: Elm format measurement
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: get-measurement
           label: "Elm format"
         continue-on-error: true
 
       - name: Show Energy Results
-        uses: green-coding-berlin/eco-ci-energy-estimation@v1.2.0
+        uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
           task: display-measurement
         continue-on-error: true
