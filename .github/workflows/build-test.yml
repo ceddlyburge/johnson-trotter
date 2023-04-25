@@ -135,5 +135,5 @@ jobs:
       - name: Show Energy Results
         uses: green-coding-berlin/eco-ci-energy-estimation@main
         with:
-          task: display-measurement
+          task: display-results
         continue-on-error: true
