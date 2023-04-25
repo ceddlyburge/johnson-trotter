@@ -1,5 +1,7 @@
 # Johnson Trotter algorithm
 
+[![Energy Used](https://api.green-coding.berlin/v1/ci/badge/get?repo=ceddlyburge/johnson-trotter&branch=main&workflow=55273066)](https://metrics.green-coding.berlin/ci.html?repo=ceddlyburge%2Fjohnson-trotter&branch=main&workflow=55273066)
+
 Each permutation in the [Johnson Trotter algorithm](https://en.wikipedia.org/wiki/Steinhaus%E2%80%93Johnson%E2%80%93Trotter_algorithm) differs from the previous one by swapping two adjacent elements of the sequence.
 
 The main benefit of this is that it can calculate and return one permutation at a time, instead of requiring all permutations to be found at once.
