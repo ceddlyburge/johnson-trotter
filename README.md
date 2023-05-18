@@ -27,3 +27,5 @@ The `next` function returns the next `Step` in the sequence. It requires a `Stat
         |> Maybe.andThen JohnsonTrotter.getPermutation
     -- [ "a", "c", "b" ]
 ```
+
+You can look at [this Ellie example to use it with a Lazy List implementation](https://ellie-app.com/mDLypsRB6XXa1).
