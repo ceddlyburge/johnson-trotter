@@ -49,11 +49,11 @@ jobs:
       # Re-use ~/.elm between runs until elm.json, elm-tooling.json or
       # review/elm.json changes. The Elm compiler saves downloaded Elm packages
       # to ~/.elm, and elm-tooling saves downloaded tool executables there.
-      - name: Cache ~/.elm
-        uses: actions/cache@v3
-        with:
-          path: ~/.elm
-          key: elm-${{ hashFiles('elm.json', 'elm-tooling.json', 'review/elm.json') }}
+#       - name: Cache ~/.elm
+#         uses: actions/cache@v3
+#         with:
+#           path: ~/.elm
+#           key: elm-${{ hashFiles('elm.json', 'elm-tooling.json', 'review/elm.json') }}
 
       # Install npm packages, unless we restored them from cache.
       # Since `npm ci` removes the node_modules folder before running it’s
